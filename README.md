@@ -7,21 +7,29 @@ Catch it live on [Twitch](https://www.twitch.tv/iotadev)
 1. The Network
 
     a. What is Tangle?
+
     b. How's it different from Blockchain?
+
     c. Tangle Visualiser.
+
     d. The Coordicide Overview.
 
 2. The Client Libraries
 
     a. Rust Library
+
     b. Bindings
+
     c. Using Bindings
 
 3. Wallet Libraries
 
     a. Wallets
+
     b. Rust Library
+
     c. Bindings
+
     d. Using Bindings
 
 4. A live example.
