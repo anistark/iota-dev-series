@@ -8,6 +8,8 @@ const client = new ClientBuilder()
     .disableNodeSync()
     .build();
 
+client.getInfo().then(console.log).catch(console.error)
+
 // 2
 function generateSeed() {
     const crypto = require('crypto');
@@ -23,6 +25,7 @@ function generateSeed() {
 
 var IOTA_SEED_SECRET = "67442a3f19ee1a625cb3526f5343c1d54498a69c86b3f745bbfc2ded454ccca7"
 
+// 3
 async function generateAddress() {
     const addresses = await client.getAddresses(IOTA_SEED_SECRET)
     .accountIndex(0)
@@ -58,12 +61,14 @@ async function getOutputs() {
     console.log(outputs);
 }
 
+// 6
 async function sendMessageEmpty() {
     const messageId = await client.message().submit();
     console.log(messageId);
     // 8e591c80a6c0b002e7520a1ef61ed11396e5b7137cd1c9cf3311af1baf937f1b
 }
 
+// 7
 async function getMessageFromTips() {
     const tips = await client.getTips();
     const message_data = await client.getMessage().data(tips[0]);
@@ -72,7 +77,7 @@ async function getMessageFromTips() {
     console.log(message_data);
 }
 
-
+// 8
 async function sendMessage() {
     const message = await client.message()
         .index('untanglingiota/js')
@@ -85,8 +90,9 @@ async function sendMessage() {
     // 82b77e8e7f8c557517c4064f6555cadac766b6f1df5fea69512cb8a6b80132be
 }
 
-sendMessage()
+// sendMessage()
 
+// 9
 async function getMessage(messageID) {
     let messagePayload = await client.getMessage().data(messageID)
     return messagePayload.message.payload.data;
