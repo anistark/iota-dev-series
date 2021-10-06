@@ -51,7 +51,7 @@ async function verifyDoorMQTT() {
     console.log("message:", message);
 }
 
-// verifyDoorMQTT()
+verifyDoorMQTT()
 
 
 async function getValidation() {
@@ -68,4 +68,4 @@ async function getValidation() {
     })
 }
 
-getValidation()
+// getValidation()
