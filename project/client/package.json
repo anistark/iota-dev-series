@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@iota/client": "^1.0.1",
-    "axios": "^0.21.4"
+    "@iota/client-wasm": "^0.2.0",
+    "axios": "^0.21.4",
+    "dotenv": "^10.0.0"
   }
 }

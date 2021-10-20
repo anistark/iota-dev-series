@@ -54,4 +54,4 @@ def __main__():
     client.subscribe_topic(pushTopic, process_data)
     __spinner__()
 
-__main__()
+__spinner__()
